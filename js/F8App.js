@@ -28,7 +28,8 @@
 var React = require('React');
 var AppState = require('AppState');
 var LoginScreen = require('./login/LoginScreen');
-var PushNotificationsController = require('./PushNotificationsController');
+//var PushNotificationsController = require('./PushNotificationsController');
+//       <PushNotificationsController />
 var StyleSheet = require('StyleSheet');
 var F8Navigator = require('F8Navigator');
 var CodePush = require('react-native-code-push');
@@ -52,7 +53,7 @@ var F8App = React.createClass({
     AppState.addEventListener('change', this.handleAppStateChange);
 
     // TODO: Make this list smaller, we basically download the whole internet
-    this.props.dispatch(loadNotifications());
+   // this.props.dispatch(loadNotifications());
     this.props.dispatch(loadMaps());
     this.props.dispatch(loadConfig());
     this.props.dispatch(loadSessions());
@@ -88,7 +89,6 @@ var F8App = React.createClass({
           barStyle="light-content"
          />
         <F8Navigator />
-        <PushNotificationsController />
       </View>
     );
   },

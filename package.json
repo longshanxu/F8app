@@ -9,6 +9,9 @@
     "test": "jest",
     "lint": "eslint ."
   },
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
   "dependencies": {
     "art": "~0.10.1",
     "babel-cli": "~6.10.1",
